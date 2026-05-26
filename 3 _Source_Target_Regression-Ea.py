@@ -192,7 +192,7 @@ def GBRegression(trainX, testX, trainY, testY, max_evals, Loop_Step, screen_step
     predicted_testY_file = open(result_path + "predicted_testY_" + str(Loop_Step) + "_" + str(screen_step) + ".dat", 'a')
     predicted_trainY_file = open(result_path + "predicted_trainY_" + str(Loop_Step) + "_" + str(screen_step) + ".dat", 'a')
 
-    # Define the parameter space for hyperopt
+    # Define the parameter space for hyperopt ## need to be modified to a wider range
     parameter_space_gbr = {
         "colsample_bytree": hp.uniform("colsample_bytree", 0.7432, 0.7442),
         "max_depth": hp.quniform("max_depth", 3, 4, 1),
