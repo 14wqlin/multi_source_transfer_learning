@@ -194,13 +194,13 @@ def GBRegression(trainX, testX, trainY, testY, max_evals, Loop_Step, screen_step
 
     # Define the parameter space for hyperopt ## need to be modified to a wider range
     parameter_space_gbr = {
-        "colsample_bytree": hp.uniform("colsample_bytree", 0.7432, 0.7442),
-        "max_depth": hp.quniform("max_depth", 3, 4, 1),
-        "n_estimators": hp.quniform("n_estimators", 90, 100, 1),
-        "learning_rate": hp.uniform("learning_rate", 0.2672, 0.2682),
-        "subsample": hp.uniform("subsample", 0.542, 0.552),
-        "min_child_weight": hp.uniform("min_child_weight", 3.197, 3.205),
-        "gamma": hp.uniform("gamma", 0.164, 0.165)
+        "colsample_bytree": hp.uniform("colsample_bytree", 0.5, 1.0),
+        "max_depth": hp.quniform("max_depth", 1, 10, 1),
+        "n_estimators": hp.quniform("n_estimators", 10, 200, 1),
+        "learning_rate": hp.uniform("learning_rate", 0.01, 0.5),
+        "subsample": hp.uniform("subsample", 0.5, 1.0),
+        "min_child_weight": hp.uniform("min_child_weight", 0.5, 10),
+        "gamma": hp.uniform("gamma", 0.01, 1)
     }
 
     count = 0  # Counter for parameter combinations
