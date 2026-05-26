@@ -482,7 +482,7 @@ for i in range(Round):
 
     train_r2, train_mae, test_r2, test_mae, \
     train_true, train_pred, test_true, test_pred, train_losses = train_mlp_classical_TL(
-        model = mlp, train_loader = train_loader_s, iteration = 200
+        model = mlp, train_loader = train_loader_s, iteration = 1000
         , testX=testX_s, testY=testY_s
         , trainX=trainX_s, trainY=trainY_s
         , minvalue=min(label_s)
