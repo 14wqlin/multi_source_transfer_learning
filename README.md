@@ -89,40 +89,63 @@ These source-domain datasets were used to train individual adsorption-energy pre
 The target-domain model integrates transferred representations from multiple source-domain adsorption-energy models and performs regression for C–H bond activation barrier prediction.
 
 ## Workflow
-The overall workflow is:
-### Prepare source-domain datasets
-8635-Oads.xlsx
-13113-H_in_O_ads.xlsx
-8646-H_in_M_ads.xlsx
-6609-OHads.xlsx
-2079-CH3ads.xlsx
+The overall workflow is as follows:
 
-### Train source-domain feature extractors
-Train individual neural networks for each adsorption-energy prediction task.
-Save the learned source-domain models or representations.
+### 1. Prepare source-domain datasets
+The following source-domain adsorption-energy datasets are used:
+- `8635-Oads.xlsx`
+- `13113-H_in_O_ads.xlsx`
+- `8646-H_in_M_ads.xlsx`
+- `6609-OHads.xlsx`
+- `2079-CH3ads.xlsx`
 
-### Prepare target-domain dataset
-270_DFT_3090_50_prediction-Ea.xlsx
-Transfer and fuse source-domain representations
+### 2. Train source-domain feature extractors
+Individual neural networks are trained for each adsorption-energy prediction task.
 
-### Extract useful representations from pretrained source-domain models.
-Fuse multi-source information for the target-domain regression task.
+The source-domain tasks include:
+- `Eads(O)`
+- `Eads(H@O)`
+- `Eads(H@M)`
+- `Eads(OH)`
+- `Eads(CH3)`
 
-### Train target-domain regression model
-Use 3_Source_Target_Regression-Ea.py or 3_Source_Target_Regression-Ea.ipynb.
-Predict methane C–H bond activation barriers.
+The learned source-domain models or representations are saved and subsequently transferred to the target-domain regression task.
+
+### 3. Prepare target-domain dataset
+The target-domain dataset is:
+- `270_DFT_3090_50_prediction-Ea.xlsx`
+
+This dataset is used for methane C–H bond activation barrier prediction.
+
+### 4. Transfer and fuse source-domain representations
+Useful representations are extracted from pretrained source-domain models.
+
+The transferred representations from multiple source domains are fused to construct a multi-source representation for the target-domain regression task.
+
+### 5. Train target-domain regression model
+The target-domain regression model is trained using:
+- `3_Source_Target_Regression-Ea.py`
+- `3_Source_Target_Regression-Ea.ipynb`
+
+The trained model is used to predict methane C–H bond activation barriers.
+
+---
 
 ## Requirements
-The codes are written in Python and Jupyter Notebook. The main packages include:
-Python
-NumPy
-Pandas
-Scikit-learn
-PyTorch
-Matplotlib
-OpenPyXL
-Jupyter Notebook
-A typical environment can be installed using:
+The codes are written in Python and Jupyter Notebook.
+
+The main required packages include:
+- Python
+- NumPy
+- Pandas
+- Scikit-learn
+- PyTorch
+- Matplotlib
+- OpenPyXL
+- Jupyter Notebook
+
+A typical Python environment can be installed using:
+```bash
 pip install numpy pandas scikit-learn torch matplotlib openpyxl notebook
 Depending on the local CUDA environment, please install the appropriate version of PyTorch from the official website:
 https://pytorch.org/
