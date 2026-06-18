@@ -1,6 +1,6 @@
 # Multi-source Transfer Learning for C–H Bond Activation Barrier Prediction
-This repository contains the datasets, source-domain training codes, target-domain regression codes, and corresponding Jupyter notebooks used for multi-source transfer learning prediction of methane C–H bond activation barriers.
-The workflow consists of multiple source-domain adsorption-energy prediction tasks and one target-domain regression task for C–H bond activation barrier prediction. Source-domain models are first trained on adsorption-energy datasets, and the learned representations are then transferred and fused for the target-domain activation barrier prediction.
+-This repository contains the datasets, source-domain training codes, target-domain regression codes, and corresponding Jupyter notebooks used for multi-source transfer learning prediction of methane C–H bond activation barriers.
+-The workflow consists of multiple source-domain adsorption-energy prediction tasks and one target-domain regression task for C–H bond activation barrier prediction. Source-domain models are first trained on adsorption-energy datasets, and the learned representations are then transferred and fused for the target-domain activation barrier prediction.
 ---
 ## Repository Structure
 ```text
@@ -35,8 +35,8 @@ The workflow consists of multiple source-domain adsorption-energy prediction tas
 │
 └── README.md
 ```
-The .py files provide executable Python scripts, while the corresponding .ipynb files provide Jupyter Notebook versions for interactive training, testing, and visualization.
-The folders beginning with Source_1, Source_2, Source_3, Source_4, Source_5, and 3_Source contain the corresponding training outputs, transferred features, saved models, or regression results generated during source-domain pretraining and target-domain prediction.
+-The .py files provide executable Python scripts, while the corresponding .ipynb files provide Jupyter Notebook versions for interactive training, testing, and visualization.
+-The folders beginning with Source_1, Source_2, Source_3, Source_4, Source_5, and 3_Source contain the corresponding training outputs, transferred features, saved models, or regression results generated during source-domain pretraining and target-domain prediction.
 
 ## Dataset Description
 
