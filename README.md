@@ -34,6 +34,7 @@ The workflow consists of multiple source-domain adsorption-energy prediction tas
 ├── 3_Source_3439_270_51_Ea-merged-2000-20-0.1
 │
 └── README.md
+```
 The .py files provide executable Python scripts, while the corresponding .ipynb files provide Jupyter Notebook versions for interactive training, testing, and visualization.
 
 The folders beginning with Source_1, Source_2, Source_3, Source_4, Source_5, and 3_Source contain the corresponding training outputs, transferred features, saved models, or regression results generated during source-domain pretraining and target-domain prediction.
@@ -110,6 +111,7 @@ A typical environment can be installed using:
 pip install numpy pandas scikit-learn torch matplotlib openpyxl notebook
 Depending on the local CUDA environment, please install the appropriate version of PyTorch from the official website:
 https://pytorch.org/
+
 Usage
 1. Train source-domain models
 For example, to train the source-domain model for Eads(O):
