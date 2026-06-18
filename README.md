@@ -74,20 +74,18 @@ The target-domain model integrates transferred representations from multiple sou
 
 Workflow
 The overall workflow is:
-
 Prepare source-domain datasets
-
 8635-Oads.xlsx
 13113-H_in_O_ads.xlsx
 8646-H_in_M_ads.xlsx
 6609-OHads.xlsx
 2079-CH3ads.xlsx
-Train source-domain feature extractors
 
+Train source-domain feature extractors
 Train individual neural networks for each adsorption-energy prediction task.
 Save the learned source-domain models or representations.
-Prepare target-domain dataset
 
+Prepare target-domain dataset
 270_DFT_3090_50_prediction-Ea.xlsx
 Transfer and fuse source-domain representations
 
