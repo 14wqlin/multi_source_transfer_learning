@@ -335,8 +335,8 @@ def plot_results(train_true_list, train_pred_list, test_true_list, test_pred_lis
     max_val = max(np.max(avg_train_true), np.max(avg_test_true))
     plt.plot([min_val, max_val], [min_val, max_val], 'k--', lw=1)
     
-    plt.xlabel('DFT Calculated $E_{\mathrm{ads}}$(CH_3)', fontsize=12)
-    plt.ylabel('ML Predicted $E_{\mathrm{ads}}$(CH_3)', fontsize=12)
+    plt.xlabel('DFT Calculated $E_{\mathrm{ads}}$(CH$_3$)', fontsize=12)
+    plt.ylabel('ML Predicted $E_{\mathrm{ads}}$(CH$_3$)', fontsize=12)
     plt.legend(fontsize=8)
     plt.tight_layout()
     plt.savefig(f'{folder_name}/prediction_scatter.jpg', dpi=300)
