@@ -1,5 +1,5 @@
 # Multi-source Transfer Learning for C–H Bond Activation Barrier Prediction
-This repository contains the datasets, source-domain training codes, target-domain regression codes, and corresponding Jupyter notebooks used for multi-source transfer learning prediction of methane C–H bond activation barriers.
+- `This repository contains the datasets, source-domain training codes, target-domain regression codes, and corresponding Jupyter notebooks used for multi-source transfer learning prediction of methane C–H bond activation barriers.`
 The workflow consists of multiple source-domain adsorption-energy prediction tasks and one target-domain regression task for C–H bond activation barrier prediction. Source-domain models are first trained on adsorption-energy datasets, and the learned representations are then transferred and fused for the target-domain activation barrier prediction.
 ---
 ## Repository Structure
