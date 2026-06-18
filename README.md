@@ -131,26 +131,6 @@ The trained model is used to predict methane C–H bond activation barriers.
 
 ---
 
-## Requirements
-The codes are written in Python and Jupyter Notebook.
-
-The main required packages include:
-- Python
-- NumPy
-- Pandas
-- Scikit-learn
-- PyTorch
-- Matplotlib
-- OpenPyXL
-- Jupyter Notebook
-
-A typical Python environment can be installed using:
-```bash
-pip install numpy pandas scikit-learn torch matplotlib openpyxl notebook
-```
-Depending on the local CUDA environment, please install the appropriate version of PyTorch from the official website:
-https://pytorch.org/
-
 ## Usage
 ### 1. Train source-domain models
 For example, to train the source-domain model for Eads(O):
